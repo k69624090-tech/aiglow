@@ -22,6 +22,7 @@ if (guideFloating && guideMessage && watchedSections.length) {
       const message = visible.target.getAttribute("data-guide");
       if (message) {
         guideMessage.textContent = message;
+        guideFloating.classList.toggle("is-muted", visible.target.classList.contains("hero"));
         guideFloating.classList.add("is-active");
         window.setTimeout(() => guideFloating.classList.remove("is-active"), 420);
       }

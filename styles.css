@@ -74,16 +74,48 @@ button, input, textarea { font: inherit; }
   background: rgba(246, 249, 255, 0.86);
   backdrop-filter: blur(18px);
 }
-.brand { display: inline-flex; gap: 12px; align-items: center; }
+.brand {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  min-width: 148px;
+}
 .brand img {
-  width: 50px;
-  height: 56px;
-  object-fit: contain;
-  animation: floaty 4s ease-in-out infinite;
+  display: none;
 }
 .brand strong, .brand small { display: block; }
-.brand strong { font-size: 1.08rem; }
-.brand small { margin-top: 2px; color: var(--muted); font-size: 0.76rem; }
+.brand-logo, .brand strong {
+  position: relative;
+  color: #09265a;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  line-height: 0.95;
+}
+.brand-logo::after, .brand strong::after {
+  position: absolute;
+  top: -10px;
+  right: -24px;
+  width: 18px;
+  height: 18px;
+  background:
+    radial-gradient(circle at 82% 18%, var(--blue) 0 2px, transparent 2.5px),
+    linear-gradient(45deg, transparent 38%, var(--blue) 39% 61%, transparent 62%),
+    linear-gradient(-45deg, transparent 38%, var(--blue) 39% 61%, transparent 62%);
+  content: "";
+}
+.brand small {
+  margin-top: 4px;
+  color: var(--blue);
+  font-size: 0;
+  font-weight: 900;
+}
+.brand small::after {
+  content: "初心者にやさしいAIメディア";
+  font-size: 0.72rem;
+}
 
 .site-nav {
   display: flex;
@@ -93,7 +125,27 @@ button, input, textarea { font: inherit; }
   color: var(--muted);
   font-weight: 800;
 }
+.site-nav a {
+  display: grid;
+  gap: 2px;
+  min-width: 3.8rem;
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1.1;
+}
+.site-nav a::before {
+  color: var(--ink);
+  font-size: 0.94rem;
+  font-weight: 950;
+}
+.site-nav a[href$="index.html"]::before { content: "ホーム"; }
+.site-nav a[href$="articles.html"]::before { content: "記事"; }
+.site-nav a[href$="videos.html"]::before { content: "動画"; }
+.site-nav a[href$="gallery.html"]::before { content: "画像"; }
+.site-nav a[href$="about.html"]::before { content: "概要"; }
+.site-nav a[href$="premium.html"]::before { content: "プラス"; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--blue); }
+.site-nav a:hover::before, .site-nav a[aria-current="page"]::before { color: var(--blue); }
 .login-button, .button {
   display: inline-flex;
   align-items: center;
@@ -125,7 +177,13 @@ main { width: var(--page); margin: 0 auto; }
   background: rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow);
   transform: translateY(0);
-  transition: transform 240ms ease;
+  opacity: 1;
+  transition: transform 240ms ease, opacity 240ms ease;
+}
+.guide-floating.is-muted {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
 }
 .guide-floating.is-active { transform: translateY(-8px) rotate(-1deg); }
 .guide-floating img { width: 62px; height: 72px; object-fit: contain; animation: floaty 3.6s ease-in-out infinite; }
@@ -142,7 +200,7 @@ main { width: var(--page); margin: 0 auto; }
 .kicker, .chip, .step {
   color: var(--blue);
   font-weight: 900;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   font-size: 0.78rem;
 }
