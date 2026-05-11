@@ -258,8 +258,15 @@ main { width: var(--page); margin: 0 auto; }
 .video-grid article h3 { margin: 14px 2px 0; font-size: 1.18rem; }
 .video-thumb {
   position: relative;
+  display: grid;
+  place-items: center;
   min-height: 240px;
   background: radial-gradient(circle at 50% 48%, rgba(71, 120, 255, .28), transparent 6rem), var(--blue-soft);
+}
+.video-thumb img {
+  width: 120px;
+  opacity: 0.95;
+  animation: floaty 3.8s ease-in-out infinite;
 }
 .thumb-yellow { background: radial-gradient(circle at 50% 48%, rgba(255, 211, 92, .42), transparent 6rem), var(--yellow-soft); }
 .video-thumb span {
