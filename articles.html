@@ -1,82 +1,18 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Articles | AIGLOW</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Articles | AIGLOW</title><link rel="stylesheet" href="./styles.css" /></head>
   <body>
-    <canvas class="ambient-canvas" id="ambientCanvas" aria-hidden="true"></canvas>
-    <header class="site-header">
-      <a class="brand" href="./index.html"><span class="brand-mark">A</span><span><strong>AIGLOW</strong><small>Beginner AI Media</small></span></a>
-      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="siteNav"><span></span><span></span></button>
-      <nav class="site-nav" id="siteNav"><a href="./index.html">Home</a><a href="./articles.html" aria-current="page">Articles</a><a href="./videos.html">Videos</a><a href="./gallery.html">Gallery</a><a href="./about.html">About</a><a href="./contact.html">Contact</a><a href="./premium.html">Premium</a></nav>
-      <div class="header-actions"><a class="ghost-button" href="./login.html">ログイン</a><a class="subscribe-button" href="./premium.html">月額購読</a></div>
-    </header>
+    <div class="sparkle-field" aria-hidden="true"></div>
+    <header class="site-header"><a class="brand" href="./index.html"><img src="./assets/aiglow-guide.png" alt="" /><span><strong>AIGLOW</strong><small>AI Starter Journal</small></span></a><button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="siteNav"><span></span><span></span></button><nav class="site-nav" id="siteNav"><a href="./index.html">Home</a><a href="./articles.html" aria-current="page">Articles</a><a href="./videos.html">Videos</a><a href="./gallery.html">Gallery</a><a href="./about.html">About</a><a href="./premium.html">Plus</a></nav><a class="login-button" href="./login.html">ログイン</a></header>
+    <aside class="guide-floating" id="guideFloating"><img src="./assets/aiglow-guide.png" alt="AIGLOWのナビゲーター" /><p id="guideMessage">記事を選ぶところから始めよう。</p></aside>
     <main>
-      <section class="page-hero">
-        <p class="eyebrow">ARTICLES</p>
-        <h1>AI初心者のための記事一覧</h1>
-        <p>ニュース、ツール解説、仕事術、プロンプトの基本を、専門用語を抑えて読めるように整理しています。</p>
-      </section>
-
-      <section class="filter-strip" aria-label="記事カテゴリ">
-        <a href="#news">AIニュース</a>
-        <a href="#tools">ツール解説</a>
-        <a href="#work">仕事術</a>
-        <a href="#prompt">プロンプト</a>
-        <a href="#premium">Premium</a>
-      </section>
-
-      <section class="article-list">
-        <article class="article-row" id="tools">
-          <a href="./article-chatgpt.html">
-            <div class="row-visual visual-cyan"></div>
-            <div>
-              <span class="category">初心者ガイド</span>
-              <h2>ChatGPTで最初に覚えるべき5つの使い方</h2>
-              <p>質問、要約、表作成、文章改善、アイデア出しを、今日から試せる形で紹介します。</p>
-              <span class="read-more">詳細を見る</span>
-            </div>
-          </a>
-        </article>
-        <article class="article-row" id="news">
-          <a href="./article-chatgpt.html">
-            <div class="row-visual visual-silver"></div>
-            <div>
-              <span class="category">AIニュース</span>
-              <h2>新しいAIモデルの発表で何が変わる？</h2>
-              <p>ニュースの見出しだけではわかりにくいポイントを、生活と仕事への影響から解説。</p>
-              <span class="read-more">詳細を見る</span>
-            </div>
-          </a>
-        </article>
-        <article class="article-row" id="work">
-          <a href="./article-chatgpt.html">
-            <div class="row-visual visual-lime"></div>
-            <div>
-              <span class="category">仕事術</span>
-              <h2>AIで資料作成を早くする3ステップ</h2>
-              <p>構成案、本文作成、見出し調整まで、初心者が迷いにくい流れに分解します。</p>
-              <span class="read-more">詳細を見る</span>
-            </div>
-          </a>
-        </article>
-        <article class="article-row is-premium" id="premium">
-          <a href="./premium.html">
-            <div class="row-visual visual-gold"></div>
-            <div>
-              <span class="category">Premium</span>
-              <h2>月次AIトレンドレポート 5月号</h2>
-              <p>今月のAIニュースをまとめて追える、月額会員向けの初心者レポートです。</p>
-              <span class="read-more">Premiumを見る</span>
-            </div>
-          </a>
-        </article>
+      <section class="page-hero section-watch" data-guide="初心者向けの記事を、テーマ別に並べているよ。"><p class="kicker">ARTICLES</p><h1>AI初心者のための記事一覧</h1><p>ニュース、ツール解説、仕事術、プロンプトの基本を、専門用語を抑えて読めるように整理しています。</p></section>
+      <section class="card-grid section-watch" data-guide="最初はChatGPTの記事がおすすめ。すぐ試せるよ。">
+        <article class="content-card"><div class="card-visual visual-chat"><img src="./assets/aiglow-guide.png" alt="" /></div><span class="chip chip-blue">初心者ガイド</span><h3>ChatGPTで最初に覚えるべき5つの使い方</h3><p>質問、要約、表作成、文章改善、アイデア出しを紹介します。</p><a href="./article-chatgpt.html">詳細を見る</a></article>
+        <article class="content-card"><div class="card-visual visual-news"></div><span class="chip chip-mint">AIニュース</span><h3>新しいAIモデルの発表で何が変わる？</h3><p>生活と仕事への影響からニュースを読み解きます。</p><a href="./article-chatgpt.html">詳細を見る</a></article>
+        <article class="content-card"><div class="card-visual visual-work"></div><span class="chip chip-coral">仕事術</span><h3>AIで資料作成を早くする3ステップ</h3><p>構成案、本文、見出し調整までの流れを解説。</p><a href="./article-chatgpt.html">詳細を見る</a></article>
       </section>
     </main>
-    <footer class="site-footer"><div><strong>AIGLOW</strong><p>AIをやさしく読み解く、初心者向けテックメディア。</p></div><nav><a href="./about.html">About</a><a href="./contact.html">Contact</a><a href="./premium.html">Premium</a></nav></footer>
-    <script src="./script.js"></script>
+    <footer class="site-footer"><strong>AIGLOW</strong><p>AIをやさしく、楽しく、毎日の道具に。</p><nav><a href="./about.html">About</a><a href="./premium.html">Plus</a></nav></footer><script src="./script.js"></script>
   </body>
 </html>
