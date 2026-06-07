@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/</loc></url>
-  <url><loc>https://example.com/articles</loc></url>
-  <url><loc>https://example.com/article-chatgpt</loc></url>
-  <url><loc>https://example.com/videos</loc></url>
-  <url><loc>https://example.com/gallery</loc></url>
-  <url><loc>https://example.com/about</loc></url>
-  <url><loc>https://example.com/contact</loc></url>
-  <url><loc>https://example.com/premium</loc></url>
-  <url><loc>https://example.com/login</loc></url>
+  <url><loc>https://aiglow.vercel.app/</loc></url>
+  <url><loc>https://aiglow.vercel.app/articles.html</loc></url>
+  <url><loc>https://aiglow.vercel.app/article-chatgpt.html</loc></url>
+  <url><loc>https://aiglow.vercel.app/article-note-sidejob.html</loc></url>
+  <url><loc>https://aiglow.vercel.app/videos.html</loc></url>
+  <url><loc>https://aiglow.vercel.app/gallery.html</loc></url>
+  <url><loc>https://aiglow.vercel.app/about.html</loc></url>
+  <url><loc>https://aiglow.vercel.app/contact.html</loc></url>
+  <url><loc>https://aiglow.vercel.app/premium.html</loc></url>
+  <url><loc>https://aiglow.vercel.app/login.html</loc></url>
 </urlset>

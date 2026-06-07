@@ -374,6 +374,7 @@ main { width: var(--page); margin: 0 auto; }
 .article-body { padding: clamp(24px, 4vw, 42px); }
 .article-body h1 { margin: 10px 0 12px; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.12; }
 .article-body h2 { margin-top: 34px; }
+.article-body h3 { margin: 24px 0 8px; font-size: 1.18rem; }
 .article-meta { display: flex; flex-wrap: wrap; gap: 12px; color: var(--muted); font-weight: 800; }
 .article-hero { display: grid; place-items: center; min-height: 260px; margin: 28px 0; border: 2px solid var(--ink); border-radius: var(--radius-md); background: var(--blue-soft); }
 .article-hero img { width: 150px; animation: floaty 3.6s ease-in-out infinite; }
